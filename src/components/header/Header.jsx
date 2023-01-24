@@ -6,10 +6,8 @@ import Bottom from "./Bottom";
 const Header = () => {
   return (
     <section id="header">
-      <div className="w-100">
-        <Top />
-        <Bottom />
-      </div>
+      <Top />
+      <Bottom />
     </section>
   );
 };

@@ -108,7 +108,7 @@
 
 /* lg - For large devices */
 @media screen and (max-width: 992px) {
-    .bottom_header {
+    .rightButtons_header {
         padding-bottom: 0.5rem;
     }
 
@@ -122,11 +122,10 @@
     }
 }
 
-/* md - For medium devices */
-@media screen and (max-width: 768px) {}
-
 /* sm */
-@media screen and (max-width: 576px) {}
-
-/* xs - For small devices */
-@media screen and (max-width: 350px) {}
+@media screen and (max-width: 576px) {
+    .bottom_header-logo {
+        max-width: 75px;
+        max-height: 72px;
+    }
+}
