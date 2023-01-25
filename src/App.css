@@ -6,6 +6,14 @@
     max-width: 1920px;
 }
 
+select.form-control{
+    -webkit-appearance: menulist!important;
+    -moz-appearance: menulist!important;
+    -ms-appearance: menulist!important;
+    -o-appearance: menulist!important;
+    appearance: menulist!important;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* lg - For large devices */
 @media screen and (max-width: 992px) {}

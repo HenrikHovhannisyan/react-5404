@@ -40,9 +40,85 @@ const Form = () => {
               role="tabpanel"
               aria-labelledby="nav-make-tab"
             >
-              <p>
-                <strong>Make</strong>
-              </p>
+              <form>
+                <div className="row">
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-lt">
+                    <label className="banner_form-label" htmlFor="usage">
+                      Usage
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="usage"
+                      name="make_usage"
+                    >
+                      <option>New & used</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input">
+                    <label className="banner_form-label" htmlFor="make">
+                      Make
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="make"
+                      name="make_make"
+                    >
+                      <option>Polestar</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-lb">
+                    <label className="banner_form-label" htmlFor="model">
+                      Model
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="model"
+                      name="make_model"
+                    >
+                      <option>All models</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-rt">
+                    <label className="banner_form-label" htmlFor="price">
+                      Price
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="price"
+                      name="make_price"
+                    >
+                      <option>Max price $60.000</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-2 banner_form_input banner_form_input-bb">
+                    <label className="banner_form-label" htmlFor="distance">
+                      Distance
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="distance"
+                      name="make_distance"
+                    >
+                      <option>20 miles</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-2 banner_form_input banner_form_input-bb">
+                    <label className="banner_form-label" htmlFor="make_zip">ZIP</label>
+                    <input
+                      className="form-control banner_form-control"
+                      type="text"
+                      name="make_zip"
+                      placeholder="ZIP"
+                      id="make_zip"
+                    />
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-rb p-0">
+                    <button className="banner_form_btn-red">Search</button>
+                  </div>
+                </div>
+              </form>
             </div>
             <div
               className="tab-pane fade"
@@ -50,9 +126,73 @@ const Form = () => {
               role="tabpanel"
               aria-labelledby="nav-body_style-tab"
             >
-              <p>
-                <strong>Body style form</strong>
-              </p>
+              <form>
+                <div className="row">
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-lt">
+                    <label className="banner_form-label" htmlFor="body_style_usage">
+                      New/used
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="body_style_usage"
+                      name="body_style_usage"
+                    >
+                      <option>New & used</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input">
+                    <label className="banner_form-label" htmlFor="body_style">
+                      Body style
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="body_style"
+                      name="body_style"
+                    >
+                      <option>All body styles</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-lb">
+                    <label className="banner_form-label" htmlFor="body_style_price">
+                      Price
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="body_style_price"
+                      name="body_style_price"
+                    >
+                      <option>No max price</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-bb">
+                    <label className="banner_form-label" htmlFor="distance">
+                      Distance
+                    </label>
+                    <select
+                      className="form-control banner_form-control"
+                      id="distance"
+                      name="body_style_distance"
+                    >
+                      <option>20 miles</option>
+                    </select>
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-rt">
+                    <label className="banner_form-label" htmlFor="body_style_zip">ZIP</label>
+                    <input
+                      className="form-control banner_form-control"
+                      type="text"
+                      name="body_style_zip"
+                      placeholder="ZIP"
+                      id="body_style_zip"
+                    />
+                  </div>
+                  <div className="col-12 col-md-4 banner_form_input banner_form_input-rb p-0">
+                    <button className="banner_form_btn-red">Search</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
