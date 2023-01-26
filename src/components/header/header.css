@@ -17,7 +17,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 26px;
     display: flex;
     align-items: center;
@@ -103,6 +103,9 @@
     .rightButtons_header_login,
     .rightButtons_header_SignUp {
         padding: 10px 25px;
+    }
+    .bottom_header-link {
+        margin: 0 15px;
     }
 }
 
