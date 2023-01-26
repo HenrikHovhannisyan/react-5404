@@ -14,9 +14,25 @@ select.form-control{
     appearance: menulist!important;
 }
 
+.section_title {
+    margin-top: 200px;
+    margin-bottom: 60px;
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: #363839;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* lg - For large devices */
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    .section_title {
+        margin-top: 100px;
+    }
+}
 
 /* md - For medium devices */
 @media screen and (max-width: 768px) {}

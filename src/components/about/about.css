@@ -1,15 +1,3 @@
-.about_title {
-    margin-top: 200px;
-    margin-bottom: 60px;
-    font-family: 'Rajdhani';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 52px;
-    line-height: 66px;
-    text-transform: uppercase;
-    color: #363839;
-}
-
 .about_container {
     border: 1px solid #D2D3D6;
     border-radius: 4px;

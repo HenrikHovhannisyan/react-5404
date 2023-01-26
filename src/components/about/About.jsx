@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about">
       <div className="container-fluid max_width">
-        <h2 className="about_title">ABOUT</h2>
+        <h2 className="section_title">ABOUT</h2>
         <div className="about_container mb-5">
           <div className="row">
             <div className="col-12 col-lg-6 d-flex align-items-center">
