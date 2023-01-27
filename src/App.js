@@ -5,6 +5,7 @@ import Banner from "./components/banner/Banner";
 import WhatWeDo from "./components/whatWeDo/WhatWeDo";
 import About from "./components/about/About";
 import LatestCar from "./components/latestCar/LatestCar";
+import PopularCars from "./components/popularCars/PopularCars";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <WhatWeDo />
       <About />
       <LatestCar />
+      <PopularCars />
     </>
   );
 }
