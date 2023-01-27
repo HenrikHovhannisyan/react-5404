@@ -7,7 +7,7 @@ const About = () => {
     <section id="about">
       <div className="container-fluid max_width">
         <h2 className="section_title">ABOUT</h2>
-        <div className="about_container mb-5">
+        <div className="about_container">
           <div className="row">
             <div className="col-12 col-lg-6 d-flex align-items-center">
               <img src={Image} className="img-fluid w-100" alt="About" />
