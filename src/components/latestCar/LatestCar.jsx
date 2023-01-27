@@ -1,4 +1,5 @@
 import React from "react";
+import "./latestCar.css";
 import Car from "../car/Car";
 import { cars } from "../../data";
 
@@ -17,6 +18,9 @@ const LatestCar = () => {
                 </div>
               );
             })}
+          </div>
+          <div className="text-end">
+            <button className="btn latestCar_btn">Show more</button>
           </div>
         </div>
       </div>

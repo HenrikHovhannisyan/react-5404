@@ -129,6 +129,11 @@
     border: 0;
 }
 
+.banner_form_btn-red:hover {
+    color: #B11C32;
+    background: #FFFFFF;
+}
+
 .banner_form-label {
     font-family: 'Roboto';
     font-style: normal;

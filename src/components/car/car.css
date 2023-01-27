@@ -42,6 +42,11 @@
     color: #FFFFFF;
 }
 
+.car_show-btn:hover {
+    background: #FFFFFF;
+    color: #1B1919;
+}
+
 .car_heart-btn {
     background: #FFFFFF;
     border: 1px solid #1B1919;
@@ -49,7 +54,6 @@
     padding: 13px;
     margin-left: 16px;
 }
-
 
 /*=============== BREAKPOINTS ===============*/
 /* xl */
