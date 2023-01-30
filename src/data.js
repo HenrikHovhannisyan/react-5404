@@ -2,6 +2,10 @@ import Car1 from "./assets/img/cars/1.png";
 import Car2 from "./assets/img/cars/2.png";
 import Car3 from "./assets/img/cars/3.png";
 import Car4 from "./assets/img/cars/4.png";
+import NewsCar1 from "./assets/img/news/1.png";
+import NewsCar2 from "./assets/img/news/2.png";
+import NewsCar3 from "./assets/img/news/3.png";
+import NewsCar4 from "./assets/img/news/4.png";
 
 export const WHAT_WE_DO = [
   {
@@ -74,5 +78,36 @@ export const cars = [
     img: Car4,
     name: "2023 Acura TLX Type S",
     price: "61,665",
+  },
+];
+
+export const NewsData = [
+  {
+    id: 1,
+    img: NewsCar1,
+    title: "Duis aute irure dolor",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 2,
+    img: NewsCar2,
+    title: "Nam libero tempore",
+    description:
+      "Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil.",
+  },
+  {
+    id: 3,
+    img: NewsCar3,
+    title: "Sed ut perspiciatis unde omnis",
+    description:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+  },
+  {
+    id: 4,
+    img: NewsCar4,
+    title: "Ut enim ad minim",
+    description:
+      "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
   },
 ];
