@@ -30,7 +30,7 @@
     line-height: 102px;
     text-transform: uppercase;
     color: #FFFFFF;
-    opacity: 0.84;
+    position: sticky;
 }
 
 .banner_description {
@@ -41,7 +41,7 @@
     line-height: 34px;
     text-transform: capitalize;
     color: #FFFFFF;
-    opacity: 0.84;
+    position: sticky;
 }
 
 .banner_form {
