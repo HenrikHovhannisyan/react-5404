@@ -6,12 +6,12 @@
     max-width: 1520px;
 }
 
-select.form-control{
-    -webkit-appearance: menulist!important;
-    -moz-appearance: menulist!important;
-    -ms-appearance: menulist!important;
-    -o-appearance: menulist!important;
-    appearance: menulist!important;
+select.form-control {
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
+    -ms-appearance: menulist !important;
+    -o-appearance: menulist !important;
+    appearance: menulist !important;
 }
 
 .section_title {
@@ -31,6 +31,8 @@ select.form-control{
 @media screen and (max-width: 992px) {
     .section_title {
         margin-top: 100px;
+        font-size: 36px;
+        line-height: 44px;
     }
 }
 

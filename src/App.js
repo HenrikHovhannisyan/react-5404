@@ -8,6 +8,7 @@ import LatestCar from "./components/latestCar/LatestCar";
 import PopularCars from "./components/popularCars/PopularCars";
 import WhichCars from "./components/whichCars/WhichCars";
 import News from "./components/news/News";
+import Faq from "./components/faq/Faq";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <PopularCars />
       <WhichCars />
       <News />
+      <Faq />
     </>
   );
 }

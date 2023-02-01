@@ -111,3 +111,36 @@ export const NewsData = [
       "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
   },
 ];
+
+export const FAQ_DATA = [
+  {
+    id: 1,
+    question: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit',
+    answer: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit'
+  },
+  {
+    id: 2,
+    question: 'Excepteur sint occaecat cupidatat non proident',
+    answer: 'Excepteur sint occaecat cupidatat non proident'
+  },
+  {
+    id: 3,
+    question: 'Excepteur sint occaecat cupidatat non proident',
+    answer: 'Excepteur sint occaecat cupidatat non proident'
+  },
+  {
+    id: 4,
+    question: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
+  },
+  {
+    id: 5,
+    question: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
+  },
+  {
+    id: 6,
+    question: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit',
+    answer: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit'
+  },
+];
