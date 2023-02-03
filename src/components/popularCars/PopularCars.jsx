@@ -4,7 +4,7 @@ import "./popularCars.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper";
-import { cars } from "../../data";
+import { cars } from "../../config/data";
 import Car from "../car/Car";
 
 const PopularCars = () => {

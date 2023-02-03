@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import "./news.css";
-import { NewsData } from "../../data";
+import { NewsData } from "../../config/data";
 
 const News = () => {
   return (

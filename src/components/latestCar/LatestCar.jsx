@@ -1,7 +1,7 @@
 import React from "react";
 import "./latestCar.css";
 import Car from "../car/Car";
-import { cars } from "../../data";
+import { cars } from "../../config/data";
 
 const LatestCar = () => {
   return (

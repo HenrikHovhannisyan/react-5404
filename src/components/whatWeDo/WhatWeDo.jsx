@@ -1,7 +1,7 @@
 import React from "react";
 import "./whatWeDo.css";
 import Item from "./Item";
-import { WHAT_WE_DO } from "../../data";
+import { WHAT_WE_DO } from "../../config/data";
 
 const WhatWeDo = () => {
   return (

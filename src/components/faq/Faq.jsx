@@ -1,7 +1,7 @@
 import React from "react";
 import "./faq.css";
 import Item from "./Item";
-import { FAQ_DATA } from "../../data";
+import { FAQ_DATA } from "../../config/data";
 
 const Faq = () => {
   return (

@@ -1,11 +1,11 @@
-import Car1 from "./assets/img/cars/1.png";
-import Car2 from "./assets/img/cars/2.png";
-import Car3 from "./assets/img/cars/3.png";
-import Car4 from "./assets/img/cars/4.png";
-import NewsCar1 from "./assets/img/news/1.png";
-import NewsCar2 from "./assets/img/news/2.png";
-import NewsCar3 from "./assets/img/news/3.png";
-import NewsCar4 from "./assets/img/news/4.png";
+import Car1 from "../assets/img/cars/1.png";
+import Car2 from "../assets/img/cars/2.png";
+import Car3 from "../assets/img/cars/3.png";
+import Car4 from "../assets/img/cars/4.png";
+import NewsCar1 from "../assets/img/news/1.png";
+import NewsCar2 from "../assets/img/news/2.png";
+import NewsCar3 from "../assets/img/news/3.png";
+import NewsCar4 from "../assets/img/news/4.png";
 
 export const WHAT_WE_DO = [
   {
@@ -27,6 +27,39 @@ export const WHAT_WE_DO = [
     title: "Sell",
     description:
       "Check out our free, secure methods for selling your car. You can either sell directly to a private-party shopper or get an Instant Offer from a dealership.",
+  },
+];
+
+export const FAQ_DATA = [
+  {
+    id: 1,
+    question: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit',
+    answer: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit'
+  },
+  {
+    id: 2,
+    question: 'Excepteur sint occaecat cupidatat non proident',
+    answer: 'Excepteur sint occaecat cupidatat non proident'
+  },
+  {
+    id: 3,
+    question: 'Excepteur sint occaecat cupidatat non proident',
+    answer: 'Excepteur sint occaecat cupidatat non proident'
+  },
+  {
+    id: 4,
+    question: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
+  },
+  {
+    id: 5,
+    question: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
+  },
+  {
+    id: 6,
+    question: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit',
+    answer: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit'
   },
 ];
 
@@ -109,38 +142,5 @@ export const NewsData = [
     title: "Ut enim ad minim",
     description:
       "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
-  },
-];
-
-export const FAQ_DATA = [
-  {
-    id: 1,
-    question: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit',
-    answer: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit'
-  },
-  {
-    id: 2,
-    question: 'Excepteur sint occaecat cupidatat non proident',
-    answer: 'Excepteur sint occaecat cupidatat non proident'
-  },
-  {
-    id: 3,
-    question: 'Excepteur sint occaecat cupidatat non proident',
-    answer: 'Excepteur sint occaecat cupidatat non proident'
-  },
-  {
-    id: 4,
-    question: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
-  },
-  {
-    id: 5,
-    question: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
-    answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore'
-  },
-  {
-    id: 6,
-    question: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit',
-    answer: 'Lorem Nemo enim ipsam voluptatem quia voluptas sit'
   },
 ];
