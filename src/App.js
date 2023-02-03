@@ -9,6 +9,7 @@ import PopularCars from "./components/popularCars/PopularCars";
 import WhichCars from "./components/whichCars/WhichCars";
 import News from "./components/news/News";
 import Faq from "./components/faq/Faq";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <WhichCars />
       <News />
       <Faq />
+      <Footer />
     </>
   );
 }
