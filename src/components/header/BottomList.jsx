@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BottomList = () => {
   return (
     <ul className="navbar-nav m-auto mb-2 mb-lg-0">
       <li className="nav-item bottom_header-link">
-        <a className="nav-link " href="#1">
+        <Link to="/cars" className="nav-link">
           Cars for Sale
-        </a>
+        </Link>
       </li>
       <li className="nav-item bottom_header-link">
         <a className="nav-link " href="#2">
