@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./header.css";
 import Whatsapp from "../../assets/img/icons/whatsapp.png";
 import Telegram from "../../assets/img/icons/telegram.png";
@@ -33,4 +33,4 @@ const Top = () => {
   );
 };
 
-export default Top;
+export default memo(Top);

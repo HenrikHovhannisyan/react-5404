@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import "./latestCar.css";
 import Car from "../car/Car";
 import { cars } from "../../config/data";
+import { Link } from "react-router-dom";
 
 const LatestCar = () => {
   return (
@@ -20,7 +21,7 @@ const LatestCar = () => {
             })}
           </div>
           <div className="text-end">
-            <button className="btn latestCar_btn">Show more</button>
+            <Link to='/cars' className="btn latestCar_btn">Show more</Link>
           </div>
         </div>
       </div>
@@ -28,4 +29,4 @@ const LatestCar = () => {
   );
 };
 
-export default LatestCar;
+export default memo(LatestCar);

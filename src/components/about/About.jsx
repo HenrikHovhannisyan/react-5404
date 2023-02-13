@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./about.css";
 import Image from "../../assets/img/AboutPicture.png";
 
@@ -39,4 +39,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default memo(About);

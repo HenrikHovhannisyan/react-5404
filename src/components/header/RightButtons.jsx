@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Heart from "../../assets/img/icons/heart.png";
 
 const RightButtons = () => {
@@ -13,4 +13,4 @@ const RightButtons = () => {
   );
 };
 
-export default RightButtons;
+export default memo(RightButtons);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import Styles from "./cars.module.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
@@ -6,7 +6,7 @@ import Car from "../../components/car/Car";
 import { cars } from "../../config/data";
 
 const Cars = () => {
-  const [sort, setSort] = useState("top");
+  const [sort, setSort] = useState("low");
 
   const sortChange = (e) => {
     setSort(e.target.value);
@@ -42,9 +42,7 @@ const Cars = () => {
                     <Car
                       img={car.img}
                       name={car.name}
-                      listingPrice={car.listingPrice}
-                      mmrPrice={car.mmrPrice}
-                      sellingPrice={car.sellingPrice}
+                      price={car.price}
                     />
                   </div>
                 );
@@ -58,4 +56,4 @@ const Cars = () => {
   );
 };
 
-export default Cars;
+export default memo(Cars);

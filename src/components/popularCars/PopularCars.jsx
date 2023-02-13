@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./popularCars.css";
 import "swiper/css";
@@ -52,4 +52,4 @@ const PopularCars = () => {
   );
 };
 
-export default PopularCars;
+export default memo(PopularCars);

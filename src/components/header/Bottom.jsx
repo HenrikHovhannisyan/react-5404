@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./header.css";
 import Logo from "../../assets/img/logo.png";
 import BottomList from "./BottomList";
@@ -31,4 +31,4 @@ const Bottom = () => {
   );
 };
 
-export default Bottom;
+export default memo(Bottom);

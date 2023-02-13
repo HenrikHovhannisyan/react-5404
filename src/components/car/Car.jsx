@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./car.css";
 import CarHeart from "../../assets/img/icons/heart.png";
 
@@ -22,4 +22,4 @@ const Car = ({img, name, price}) => {
   );
 };
 
-export default Car;
+export default memo(Car);

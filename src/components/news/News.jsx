@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Item from "./Item";
 import "./news.css";
 import { NewsData } from "../../config/data";
@@ -28,4 +28,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default memo(News);

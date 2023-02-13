@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./banner.css";
 import Image from "./Image";
 import Form from "./Form";
@@ -12,4 +12,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default memo(Banner);

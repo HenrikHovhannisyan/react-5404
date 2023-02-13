@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const Image = () => {
   return (
@@ -18,4 +18,4 @@ const Image = () => {
   );
 };
 
-export default Image;
+export default memo(Image);

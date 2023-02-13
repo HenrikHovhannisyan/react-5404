@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
 const BottomList = () => {
@@ -33,4 +33,4 @@ const BottomList = () => {
   );
 };
 
-export default BottomList;
+export default memo(BottomList);

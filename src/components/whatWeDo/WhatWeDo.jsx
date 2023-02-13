@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./whatWeDo.css";
 import Item from "./Item";
 import { WHAT_WE_DO } from "../../config/data";
@@ -25,4 +25,4 @@ const WhatWeDo = () => {
   );
 };
 
-export default WhatWeDo;
+export default memo(WhatWeDo);

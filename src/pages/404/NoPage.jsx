@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import { Link } from "react-router-dom";
@@ -21,4 +21,4 @@ const NoPage = () => {
   );
 };
 
-export default NoPage;
+export default memo(NoPage);

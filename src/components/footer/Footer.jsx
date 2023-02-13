@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./footer.css";
 import Logo from "../../assets/img/bigLogo.png";
 import { Link } from "react-router-dom";
@@ -131,4 +131,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

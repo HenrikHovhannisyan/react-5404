@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./whichCars.css";
 
 const WhichCars = () => {
@@ -25,4 +25,4 @@ const WhichCars = () => {
   );
 };
 
-export default WhichCars;
+export default memo(WhichCars);

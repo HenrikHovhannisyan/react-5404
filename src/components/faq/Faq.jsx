@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import "./faq.css";
 import Item from "./Item";
 import { FAQ_DATA } from "../../config/data";
@@ -19,4 +19,4 @@ const Faq = () => {
   );
 };
 
-export default Faq;
+export default memo(Faq);
