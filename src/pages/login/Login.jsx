@@ -1,16 +1,17 @@
 import React, { memo } from "react";
 import Style from "./login.module.css";
 import Header from "../../components/header/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <section id="NoPage">
       <Header />
       <div className="container max_width">
         <div className="row ps-3 pe-3">
-          <div className="col-12 col-lg-6 mx-auto border border-danger border-2 rounded-3 mt-5 p-5 shadow">
+          <div className="col-12 col-lg-6 mx-auto border border-danger border-2 rounded-3 mt-5 p-3 shadow">
             <div className="text-center">
               <h2 className={Style.title}>Welcome back!</h2>
               <p className={Style.description}>
@@ -24,7 +25,6 @@ const Login = () => {
                 rememberPassword: false,
               }}
               validate={(values) => {
-                console.log(values["rememberPassword"][0]);
                 const errors = {};
                 if (!values.email) {
                   errors.email = "This field is required";
@@ -45,6 +45,7 @@ const Login = () => {
                 setTimeout(() => {
                   alert(JSON.stringify(values, null, 2));
                   setSubmitting(false);
+                  navigate("/");
                 }, 400);
               }}
             >
@@ -94,28 +95,34 @@ const Login = () => {
                       {errors.password && touched.password && errors.password}
                     </div>
                   </div>
-                  <div className="mb-3 d-flex justify-content-between align-items-center">
-                    <div className="form-check">
-                      <input
-                        type="checkbox"
-                        name="rememberPassword"
-                        className="form-check-input"
-                        id="rememberPassword"
-                        value="ok"
-                        onChange={handleChange}
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="rememberPassword"
-                      >
-                        Remember Password
-                      </label>
+                  <div className="mb-3">
+                    <div className="row">
+                      <div className="col-12 col-lg-6">
+                        <div className="form-check">
+                          <input
+                            type="checkbox"
+                            name="rememberPassword"
+                            className="form-check-input"
+                            id="rememberPassword"
+                            value="ok"
+                            onChange={handleChange}
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="rememberPassword"
+                          >
+                            Remember Password
+                          </label>
+                        </div>
+                      </div>
+                      <div className="col-12 col-lg-6 text-start text-lg-end">
+                        <Link className="text-danger">Forgot password?</Link>
+                      </div>
                     </div>
-                    <Link className="text-danger">Forgot password?</Link>
                   </div>
                   <button
                     type="submit"
-                    className="btn rightButtons_header_login"
+                    className="btn rightButtons_header_login m-0"
                     disabled={isSubmitting || !dirty}
                   >
                     Log in
