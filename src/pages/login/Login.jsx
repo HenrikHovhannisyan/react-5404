@@ -3,6 +3,9 @@ import Style from "./login.module.css";
 import Header from "../../components/header/Header";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
+import axios from "axios";
+import Swal from "sweetalert2";
+import { LOGIN } from "../../config/api";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,18 +23,14 @@ const Login = () => {
             </div>
             <Formik
               initialValues={{
-                email: "",
+                username: "",
                 password: "",
-                rememberPassword: false,
+                remember: false,
               }}
               validate={(values) => {
                 const errors = {};
-                if (!values.email) {
-                  errors.email = "This field is required";
-                } else if (
-                  !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                ) {
-                  errors.email = "Invalid email address";
+                if (!values.username) {
+                  errors.username = "This field is required";
                 }
 
                 if (!values.password) {
@@ -41,12 +40,27 @@ const Login = () => {
                 }
                 return errors;
               }}
-              onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                  navigate("/");
-                }, 400);
+              onSubmit={(data) => {
+                axios
+                  .post(LOGIN, data)
+                  .then((res) => {
+                    sessionStorage.setItem("message", "successLogin");
+                    sessionStorage.setItem("remember", data.remember);
+                    if (data.remember) {
+                      localStorage.setItem("token", res.data.access);
+                    } else {
+                      sessionStorage.setItem("token", res.data.access);
+                    }
+
+                    navigate("/");
+                  })
+                  .catch(() => {
+                    Swal.fire(
+                      "Warning",
+                      "Incorrect username or password",
+                      "warning"
+                    );
+                  });
               }}
             >
               {({
@@ -56,25 +70,24 @@ const Login = () => {
                 handleChange,
                 handleBlur,
                 handleSubmit,
-                isSubmitting,
                 dirty,
               }) => (
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
-                    <label htmlFor="email" className="form-label">
-                      Email address
+                    <label htmlFor="username" className="form-label">
+                      User name
                     </label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
+                      type="text"
+                      name="username"
+                      id="username"
                       className="form-control"
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      value={values.email}
+                      value={values.username}
                     />
                     <div className="form-text text-danger">
-                      {errors.email && touched.email && errors.email}
+                      {errors.username && touched.username && errors.username}
                     </div>
                   </div>
                   <div className="mb-3">
@@ -101,15 +114,15 @@ const Login = () => {
                         <div className="form-check">
                           <input
                             type="checkbox"
-                            name="rememberPassword"
+                            name="remember"
                             className="form-check-input"
-                            id="rememberPassword"
+                            id="remember"
                             value="ok"
                             onChange={handleChange}
                           />
                           <label
                             className="form-check-label"
-                            htmlFor="rememberPassword"
+                            htmlFor="remember"
                           >
                             Remember Password
                           </label>
@@ -122,8 +135,8 @@ const Login = () => {
                   </div>
                   <button
                     type="submit"
-                    className="btn rightButtons_header_login m-0"
-                    disabled={isSubmitting || !dirty}
+                    className="btn rightButtons_header_login"
+                    disabled={!dirty}
                   >
                     Log in
                   </button>

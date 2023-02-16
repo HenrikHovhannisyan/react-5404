@@ -1,10 +1,41 @@
-import React, { memo } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./header.css";
 import Logo from "../../assets/img/logo.png";
 import BottomList from "./BottomList";
 import RightButtons from "./RightButtons";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { USER } from "../../config/api";
 
 const Bottom = () => {
+  const [isLogin, isSetLogin] = useState(false);
+  const [userName, setUserName] = useState(null);
+  const token = localStorage.getItem("token") || sessionStorage.getItem('token');
+  const message = sessionStorage.getItem("message");
+
+  if (message === "successLogin") {
+    Swal.fire("Success", "Successfully signed in", "success");
+    sessionStorage.removeItem("message");
+  }
+
+  useEffect(() => {
+    if (token) {
+      isSetLogin(true);
+
+      axios
+        .get(USER, {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+        .then(function (res) {
+          setUserName(res.data.username);
+          localStorage.setItem("user", JSON.stringify(res.data));
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
+  }, [token]);
+
   return (
     <nav className="navbar navbar-expand-lg bottom_header">
       <div className="container-fluid max_width">
@@ -24,7 +55,7 @@ const Bottom = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <BottomList />
-          <RightButtons />
+          <RightButtons login={isLogin} name={userName} />
         </div>
       </div>
     </nav>
