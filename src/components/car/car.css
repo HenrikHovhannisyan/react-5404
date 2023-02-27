@@ -16,13 +16,16 @@
     font-size: 22px;
     line-height: 34px;
     color: #363839;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
 }
 
 .car_price {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 16px;
     line-height: 28px;
     color: #B11C32;
     margin-bottom: 36px;
@@ -55,6 +58,15 @@
     margin-left: 16px;
 }
 
+.car_img {
+    text-align: center;
+}
+
+.car_img>img {
+    max-width: max-content;
+    max-height: 200px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* xl */
 @media screen and (max-width: 1200px) {
@@ -63,6 +75,7 @@
         line-height: 18px;
     }
 }
+
 /* lg - For large devices */
 @media screen and (max-width: 992px) {
 

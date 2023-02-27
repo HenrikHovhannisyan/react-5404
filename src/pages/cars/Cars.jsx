@@ -3,9 +3,11 @@ import Styles from "./cars.module.css";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import Car from "../../components/car/Car";
-import { cars } from "../../config/data";
+import axios from "axios";
+import { CAR_LIST } from "../../config/api";
 
 const Cars = () => {
+  const [data, setData] = useState();
   const [sort, setSort] = useState("low");
 
   const sortChange = (e) => {
@@ -14,11 +16,22 @@ const Cars = () => {
 
   useEffect(() => {
     if (sort === "low") {
-      cars.sort((a, b) => b.id - a.id);
-    } else if (sort === "top") {
-      cars.sort((a, b) => a.id - b.id);
+      data?.sort((a, b) => b.price - a.price);
+    } else {
+      data?.sort((a, b) => a.price - b.price);
     }
-  }, [sort]);
+  });
+
+  useEffect(() => {
+    axios
+      .get(CAR_LIST)
+      .then((res) => {
+        setData(res.data.results.sort((a, b) => a.price - b.price));
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <>
@@ -28,7 +41,11 @@ const Cars = () => {
           <h1 className={Styles.title}>Cars for sale</h1>
           <div className={Styles.sort}>
             <p className={Styles.sort_title}>Sort by:</p>
-            <select className={Styles.sort_variant} value={sort} onChange={sortChange}>
+            <select
+              className={Styles.sort_variant}
+              value={sort}
+              onChange={sortChange}
+            >
               <option value="low">Lowest price</option>
               <option value="top">Top price</option>
             </select>
@@ -36,17 +53,18 @@ const Cars = () => {
           <div className="col-12 col-lg-3"></div>
           <div className="col-12 col-lg-9">
             <div className="row">
-              {cars.map((car) => {
-                return (
-                  <div key={car.id} className="col-12 col-sm-6 col-lg-4">
-                    <Car
-                      img={car.img}
-                      name={car.name}
-                      price={car.price}
-                    />
-                  </div>
-                );
-              })}
+              {data &&
+                data.map((car) => {
+                  return (
+                    <div key={car.id} className="col-12 col-sm-6 col-lg-4">
+                      <Car
+                        img={car.image}
+                        name={car.canonical_mmt}
+                        price={car.price}
+                      />
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </div>

@@ -1,12 +1,13 @@
 import React, { memo } from "react";
 import "./car.css";
 import CarHeart from "../../assets/img/icons/heart.png";
+import noImage from "../../assets/img/no-image.jpg";
 
-const Car = ({img, name, price}) => {
+const Car = ({ img, name, price }) => {
   return (
     <div className="car">
       <div className="car_img">
-        <img src={img} className="w-100" alt="Car" />
+        <img src={img || noImage} className="w-100" alt="Car" />
       </div>
       <div className="car_container">
         <h3 className="car_name">{name}</h3>
