@@ -10,8 +10,8 @@ const Car = ({ img, name, price }) => {
         <img src={img || noImage} className="w-100" alt="Car" />
       </div>
       <div className="car_container">
-        <h3 className="car_name">{name}</h3>
-        <p className="car_price">${price}</p>
+      <h3 className="car_name">{name || 'Unknown'}</h3>
+        <p className="car_price">{`${price ? `$${price}` : 'Unknown'}`}</p>
         <div className="d-flex">
           <button className="car_show-btn">Show details</button>
           <button className="car_heart-btn">

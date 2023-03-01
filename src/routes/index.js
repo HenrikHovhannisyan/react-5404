@@ -1,12 +1,14 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NoPage from "../pages/404/NoPage";
-import Login from "../pages/login/Login";
-import App from "../App";
-import Cars from "../pages/cars/Cars";
+import Loading from "../components/Loading/Loading";
+const NoPage = React.lazy(() => import("../pages/404/NoPage"));
+const App = React.lazy(() => import("../App"));
+const Cars = React.lazy(() => import("../pages/cars/Cars"));
+const Login = React.lazy(() => import("../pages/login/Login"));
 
 const RouteList = () => {
   return (
+    <Suspense fallback={<Loading />}>
     <BrowserRouter>
       <Routes>
         <Route path="*" element={<NoPage />} />
@@ -15,6 +17,7 @@ const RouteList = () => {
         <Route path="/cars" element={<Cars />} />
       </Routes>
     </BrowserRouter>
+    </Suspense>
   );
 };
 

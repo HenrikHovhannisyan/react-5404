@@ -10,13 +10,17 @@ import { USER } from "../../config/api";
 const Bottom = () => {
   const [isLogin, isSetLogin] = useState(false);
   const [userName, setUserName] = useState(null);
-  const token = localStorage.getItem("token") || sessionStorage.getItem('token');
+  const token = localStorage.getItem("token") || sessionStorage.getItem("token");
   const message = sessionStorage.getItem("message");
 
   if (message === "successLogin") {
     Swal.fire("Success", "Successfully signed in", "success");
     sessionStorage.removeItem("message");
   }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   useEffect(() => {
     if (token) {
